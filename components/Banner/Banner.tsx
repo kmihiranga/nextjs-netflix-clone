@@ -1,6 +1,10 @@
 import { FC } from 'react';
 
 const Banner: FC = () => {
+    const truncate = (text: string, n: number) => {
+        return text?.length > n ? text.substring(0, n-1) + '...' : text;
+    }
+
     return (
         <>
             <header className="banner" style={{
@@ -17,7 +21,7 @@ const Banner: FC = () => {
                         <button className="banner__button">My List</button>
                     </div>
                     <h1 className="banner__description">
-                        This is a test description
+                        {truncate(`This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.This is a test description.`, 150)}
                     </h1>
                 </div>
 
