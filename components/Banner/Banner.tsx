@@ -1,6 +1,15 @@
-import { FC } from 'react';
+import {FC, useState, useEffect} from 'react';
+import {useAppDispatch} from "~/redux/hooks";
+import {getTrendingMovieListByWeek} from "~/redux/features/trending/trendingThunk";
 
 const Banner: FC = () => {
+    const [movie, setMovie] = useState([]);
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(getTrendingMovieListByWeek())
+    }, []);
+
     const truncate = (text: string, n: number) => {
         return text?.length > n ? text.substring(0, n-1) + '...' : text;
     }
