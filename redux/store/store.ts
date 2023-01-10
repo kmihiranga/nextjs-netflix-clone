@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
+import {createWrapper} from 'next-redux-wrapper';
 import MasterSlice from "~/redux/features/master/masterSlice";
 import TrendingSlice from "~/redux/features/trending/trendingSlice";
-import {createWrapper} from 'next-redux-wrapper';
+import NetflixOriginalsSlice from "~/redux/features/netflix_originals/netflixOriginalsSlice";
+import TopRatedSlice from "~/redux/features/top_rated/topRatedSlice";
 
 const store = () => configureStore({
    reducer: {
       master: MasterSlice,
-      trending: TrendingSlice
+      trending: TrendingSlice,
+      netflixOriginals: NetflixOriginalsSlice,
+      toprated: TopRatedSlice
    }
 });
 
