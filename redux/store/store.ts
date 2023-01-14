@@ -4,13 +4,15 @@ import MasterSlice from "~/redux/features/master/masterSlice";
 import TrendingSlice from "~/redux/features/trending/trendingSlice";
 import NetflixOriginalsSlice from "~/redux/features/netflix_originals/netflixOriginalsSlice";
 import TopRatedSlice from "~/redux/features/top_rated/topRatedSlice";
+import ActionMovieSlice from "~/redux/features/action_movies/actionMoviesSlice";
 
 const store = () => configureStore({
    reducer: {
       master: MasterSlice,
       trending: TrendingSlice,
       netflixOriginals: NetflixOriginalsSlice,
-      toprated: TopRatedSlice
+      toprated: TopRatedSlice,
+      actions: ActionMovieSlice
    }
 });
 
