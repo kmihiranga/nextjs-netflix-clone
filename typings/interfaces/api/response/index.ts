@@ -5,3 +5,4 @@ export * from './ActionMovies';
 export * from './ComedyMovies';
 export * from './HorrorMovies';
 export * from './RomanceMovies';
+export * from './Documentary';

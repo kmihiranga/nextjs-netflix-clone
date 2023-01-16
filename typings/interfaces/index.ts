@@ -6,3 +6,4 @@ export * from './toprated';
 export * from './actionMovies';
 export * from './horror';
 export * from './romance';
+export * from './documentary';

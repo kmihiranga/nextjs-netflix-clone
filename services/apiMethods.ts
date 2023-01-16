@@ -1,5 +1,14 @@
 import {API} from "./apiBuild";
-import {HorrorMovieResponse, TrendingListResponse, NetflixOriginalsResponse, TopRatedListResponse, ActionMovieResponse, ComedyMovieResponse, RomanceMovieResponse} from '~/typings';
+import {
+    HorrorMovieResponse,
+    TrendingListResponse,
+    NetflixOriginalsResponse,
+    TopRatedListResponse,
+    ActionMovieResponse,
+    ComedyMovieResponse,
+    RomanceMovieResponse,
+    DocumentaryMovieResponse
+} from '~/typings';
 import {
     NetflixOriginals,
     TopRated,
@@ -48,5 +57,5 @@ export const RomanceMoviesAPI = (apiKey: string) => {
 
 export const DocumentaryMoviesAPI = (apikey: string) => {
     const DocumentaryMoviesAPIUrl = Documentaries(apikey);
-    return API.get<>();
+    return API.get<DocumentaryMovieResponse>(DocumentaryMoviesAPIUrl);
 }
