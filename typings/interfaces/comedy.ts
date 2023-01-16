@@ -1,6 +1,6 @@
 import {ComedyMovieResultResponse} from "~/typings";
 
 export interface ComedySlice {
-    comedyMovieData: ComedyMovieResultResponse[] | null;
+    comedyMovieData: ComedyMovieResultResponse[];
     comedyMovieDataLoading: boolean;
 }

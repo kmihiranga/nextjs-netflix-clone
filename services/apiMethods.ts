@@ -1,10 +1,15 @@
 import {API} from "./apiBuild";
-import {TrendingListResponse} from '~/typings';
-import {NetflixOriginals, TopRated, TrendingList, ActionMovies, ComedyMovies} from '~/constants/API';
-import {NetflixOriginalsResponse} from "~/typings/interfaces/api/response/NetflixOriginals";
-import { TopRatedListResponse } from "~/typings/interfaces/api/response/TopRated";
-import {ActionMovieResponse} from "~/typings/interfaces/api/response/ActionMovies";
-import {ComedyMovieResponse} from "~/typings/interfaces/api/response/ComedyMovies";
+import {HorrorMovieResponse, TrendingListResponse, NetflixOriginalsResponse, TopRatedListResponse, ActionMovieResponse, ComedyMovieResponse, RomanceMovieResponse} from '~/typings';
+import {
+    NetflixOriginals,
+    TopRated,
+    TrendingList,
+    ActionMovies,
+    ComedyMovies,
+    HorrorMovies,
+    RomanceMovies,
+    Documentaries
+} from '~/constants/API';
 
 export const TrendingListAPI = (apikey: string) => {
     const TrendingListAPIUrl = TrendingList(apikey);
@@ -29,4 +34,19 @@ export const ActionMoviesAPI = (apiKey: string) => {
 export const ComedyMoviesAPI = (apiKey: string) => {
     const ComedyMoviesAPIUrl = ComedyMovies(apiKey);
     return API.get<ComedyMovieResponse>(ComedyMoviesAPIUrl);
+}
+
+export const HorrorMoviesAPI = (apiKey: string) => {
+    const HorrorMoviesAPIUrl = HorrorMovies(apiKey);
+    return API.get<HorrorMovieResponse>(HorrorMoviesAPIUrl);
+}
+
+export const RomanceMoviesAPI = (apiKey: string) => {
+    const RomanceMoviesAPIUrl = RomanceMovies(apiKey);
+    return API.get<RomanceMovieResponse>(RomanceMoviesAPIUrl);
+}
+
+export const DocumentaryMoviesAPI = (apikey: string) => {
+    const DocumentaryMoviesAPIUrl = Documentaries(apikey);
+    return API.get<>();
 }

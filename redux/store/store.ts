@@ -5,6 +5,8 @@ import TrendingSlice from "~/redux/features/trending/trendingSlice";
 import NetflixOriginalsSlice from "~/redux/features/netflix_originals/netflixOriginalsSlice";
 import TopRatedSlice from "~/redux/features/top_rated/topRatedSlice";
 import ActionMovieSlice from "~/redux/features/action_movies/actionMoviesSlice";
+import ComedyMovieSlice from "~/redux/features/comedy/comedyMoviesSlice";
+import HorrorMovieSlice from "~/redux/features/horror/horrorMoviesSlice";
 
 const store = () => configureStore({
    reducer: {
@@ -12,7 +14,9 @@ const store = () => configureStore({
       trending: TrendingSlice,
       netflixOriginals: NetflixOriginalsSlice,
       toprated: TopRatedSlice,
-      actions: ActionMovieSlice
+      actions: ActionMovieSlice,
+      comedy: ComedyMovieSlice,
+      horror: HorrorMovieSlice,
    }
 });
 
