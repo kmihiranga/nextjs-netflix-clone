@@ -30,17 +30,19 @@ const HomeScreen: FC = () => {
         dispatch(getDocumentaryMovieList());
     }, [dispatch]);
 
+    const user = null;
+
     return (
         <>
             <div className='homeScreen'>
                 <Navbar />
-                
+
                 <Banner />
 
                 <TopRatedMovieCardList baseUrl={BASE_URL} title='Top Rated Movies' movies={topRated} />
                 <ActionMovieCardList baseUrl={BASE_URL} title='Action Movies' movies={actionMovies} />
                 <ComedyMovieCardList baseUrl={BASE_URL} title='Comedy Movies' movies={comedyMovies} />
-                <HorrorMovieCardList baseUrl={BASE_URL} title='Horror Movies' movies={horrorMovies} /> 
+                <HorrorMovieCardList baseUrl={BASE_URL} title='Horror Movies' movies={horrorMovies} />
                 <DocumentaryMovieCardList baseUrl={BASE_URL} title='Documentary Movies' movies={documentaryMovies} />
             </div>
         </>

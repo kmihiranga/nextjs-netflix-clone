@@ -3,6 +3,7 @@ import '@styles/HomeScreen.css'
 import '@styles/Navbar.css'
 import '@styles/Banner.css'
 import "@styles/TopRatedCard.css";
+import "@styles/LoginScreen.css";
 import type { AppProps } from 'next/app'
 import {wrapper} from "~/redux/store/store";
 import {FC} from "react";
